@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1a459011-c398-2ed9-f695-43596dd76000}</ProjectGuid>
+    <ProjectGuid>{6deec01a-b152-ddd0-bbf9-e3f668fb7c1d}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -98,7 +98,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\HurricaneVR\TechDemo\Scripts\DemoPassthroughSocket.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Scenes\scene3\scripts\change player.cs" />
+     <Compile Include="Assets\Scenes\scene3\scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scenes\scene3\scripts\ChangePlayer.cs" />
+     <Compile Include="Assets\Scenes\scene3\scripts\ReturnMain.cs" />
+     <Compile Include="Assets\Scenes\scene3\scripts\Note.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\HurricaneVR\Framework\SFX\license.txt" />
@@ -376,13 +379,13 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Assets\SteamVR\Input\Plugins\JSON.NET\Valve.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Assets\SteamVR\Input\Plugins\JSON.NET\Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -751,141 +754,141 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.XR.OpenVR.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.XR.OpenVR.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project2-main\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>C:\Users\NYCU-EC028\Desktop\XR_Project3_Group7\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{49cf7a2d-665c-fa97-50c2-2e6e4466bfd5}</Project>
+      <Project>{fbed793c-fe3b-d262-853c-57fcaad9d6de}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{0a81aec4-931b-0474-1204-d77a7f8bac80}</Project>
+      <Project>{86bea960-e5ce-4782-f98e-dd5805d973fc}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="HurricaneVR.Framework.csproj">
-      <Project>{90d81a63-4669-dfdf-0ae7-ca65b5c470fe}</Project>
+      <Project>{76890854-ac0e-5003-7b98-f0a23f6ef4ba}</Project>
       <Name>HurricaneVR.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{b806b432-2f4c-47ed-6023-4c6369e5f309}</Project>
+      <Project>{8d24b744-611d-6ef4-584f-4764b1d01e0d}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{4dadb1d3-54d5-7fc4-5670-c45812236c73}</Project>
+      <Project>{378a7008-48ba-10ca-a408-9654db79ae26}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{178dca92-a053-72d9-75eb-36a39454e869}</Project>
+      <Project>{c020e538-e52b-384c-85fc-75e52201bf5d}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="HurricaneVR.Editor.csproj">
-      <Project>{c9079fa2-7a45-99ea-f6fc-1fa696390114}</Project>
+      <Project>{07fa5a53-fbb3-bf96-dab7-41e2c5011e7a}</Project>
       <Name>HurricaneVR.Editor</Name>
     </ProjectReference>
   </ItemGroup>
