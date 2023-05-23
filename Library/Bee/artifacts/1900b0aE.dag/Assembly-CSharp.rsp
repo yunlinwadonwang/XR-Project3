@@ -398,6 +398,7 @@
 "Assets/Scenes/scene3/scripts/ChangePlayer.cs"
 "Assets/Scenes/scene3/scripts/LevelManager.cs"
 "Assets/Scenes/scene3/scripts/Note.cs"
+"Assets/Scenes/scene3/scripts/PlaceNote.cs"
 "Assets/Scenes/scene3/scripts/ReturnMain.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

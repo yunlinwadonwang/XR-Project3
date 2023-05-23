@@ -14,25 +14,27 @@ public class Note : MonoBehaviour
     public HVRGrabTrigger GrabTrigger;
     public HVRPosableGrabPoint GrabPoint;
     ChangePlayer changePlayerScript;
+    GameObject level_obj;
 
     public void Start()
     {
+        level_obj = GameObject.Find("level manager");
         changePlayerScript = GetComponent<ChangePlayer>();
-        Grabber = GameObject.FindObjectsOfType<HVRHandGrabber>().FirstOrDefault(e => e.gameObject.name == "Physics LeftHand");
+        Grabber = GameObject.Find("main/Player/Physics LeftHand").GetComponent<HVRHandGrabber>();
     }
 
     public void Grab()
     {
         if(!changePlayerScript.isVisited){
-            Grabbable.gameObject.SetActive(true);
-            if (Grabbable && Grabber)
-            {
-                if(Grabber.IsGrabbing){
-                    Grabber.ForceRelease();
-                    Grabbable.gameObject.SetActive(false);
-                }
-                Grabber.Grab(Grabbable, GrabTrigger, GrabPoint);
+            Grabber.enabled = true;
+            if(Grabber.IsGrabbing){
+                GameObject grabObj = Grabber.GrabbedTarget.gameObject;
+                Grabber.ForceRelease();
+                grabObj.SetActive(false);
             }
+            level_obj.SendMessage("AddNote", Grabbable.gameObject);
+            Grabbable.gameObject.SetActive(true);
+            Grabber.Grab(Grabbable, GrabTrigger, GrabPoint);
         }
     }
 }

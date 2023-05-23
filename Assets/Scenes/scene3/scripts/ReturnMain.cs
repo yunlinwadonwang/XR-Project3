@@ -7,7 +7,7 @@ public class ReturnMain : MonoBehaviour
 {
     GameObject level_obj;
     bool prevPress;
-    public HurricaneVR.Framework.ControllerInput.HVRPlayerInputs ControllerScript;
+    HurricaneVR.Framework.ControllerInput.HVRPlayerInputs ControllerScript;
     // Start is called before the first frame update
     void Start()
     {
