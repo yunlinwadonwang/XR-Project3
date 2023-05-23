@@ -5,7 +5,8 @@ using UnityEngine;
 public class ChangePlayer : MonoBehaviour
 {
     public LevelManager.player player;
-    public bool isVisited;
+    public float enterTime;
+    bool isVisited;
     GameObject level_obj;
     ParticleSystem particle;
     Note noteScripts;
@@ -30,8 +31,9 @@ public class ChangePlayer : MonoBehaviour
                 particle.Play();
             }
             time_counter += Time.deltaTime;
-            if(time_counter > 3){
-                noteScripts.Grab();
+            if(time_counter > enterTime){
+                if(!isVisited)
+                    noteScripts.Grab();
                 isVisited = true;
                 time_counter = 0;
                 level_obj.SendMessage("ChangePlayer", player);

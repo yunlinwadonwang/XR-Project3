@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
         s2
     };
     public player cur_player;
-    public List<GameObject> notes;
+    public List<GameObject> notes = new List<GameObject>();
     HVRHandGrabber Grabber { get; set; }
     // Start is called before the first frame update
     void Start()
@@ -27,12 +27,6 @@ public class LevelManager : MonoBehaviour
         main_obj.SetActive(true);
         s1_obj.SetActive(false);
         s2_obj.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void ChangePlayer(player p){
@@ -58,5 +52,9 @@ public class LevelManager : MonoBehaviour
 
     void AddNote(GameObject n){
         notes.Add(n);
+    }
+
+    public List<GameObject> GetNote(){
+        return notes;
     }
 }
